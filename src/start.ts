@@ -3,6 +3,8 @@ import { Telegraf } from 'telegraf'
 
 import dotenv from 'dotenv'
 
+console.time(`Bot started 🚀`)
+
 dotenv.config()
 
 const { BOT_TOKEN } = process.env
@@ -16,6 +18,5 @@ const bot = new Telegraf(BOT_TOKEN)
 launchGame(bot)
 
 bot.launch(() => {
-  console.time(`Bot started 🚀`)
   console.timeEnd('Bot started 🚀')
 })
